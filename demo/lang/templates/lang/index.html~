@@ -1,0 +1,15 @@
+<h1> <c>WELCOME</c> </h1>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+{%csrf_token%}
+<form action="{% url 'add_language' %}" method="post">
+	Enter a language name : 
+    <input type="text" name="lang_name">
+    <input type="submit" value="Add" />
+</form>
+
+You are aware of
+<ul>
+{% for lang in languages %}
+    <li> {{lang.name}}
+{% endfor %}
+</ul>

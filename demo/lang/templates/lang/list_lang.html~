@@ -1,0 +1,7 @@
+You are aware of
+<ul>
+{% for lang in languages %}
+    <li> {{lang.name}}
+{% endfor %}
+</ul>
+<form action="{% url 'index' %}" method="get">
